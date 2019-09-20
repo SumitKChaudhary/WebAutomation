@@ -25,14 +25,15 @@ public class MultipleVideoPlay
 		System.setProperty("webdriver.chrome.driver", "/Users/sumitkumar/Downloads/chromedriver");
 		
 		 driver = new ChromeDriver();
+		 
+		 driver.get("http://www.youtube.com/");	
+		 driver.manage().window().maximize();
+			
 	}
 	
 	@Test
 	public void playYoutubeMultipleVideos() throws InterruptedException
 	{
-		driver.get("http://www.youtube.com/");
-		
-		driver.manage().window().maximize();
 		// store all video elements in the list of web elements variable 
 		
 		List<WebElement> allElements= driver.findElements(By.id("video-title"));
